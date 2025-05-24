@@ -49,7 +49,9 @@ export const router = createBrowserRouter([
             },
             {
                 path:'/my-listings' ,
-                Component : MyListings
+                element: <PrivateRoute>
+                    <MyListings></MyListings>
+                </PrivateRoute>
             },
             {
                  path:"/update-roommate/:id",
