@@ -1,10 +1,10 @@
 import React from 'react';
 import Lottie from "lottie-react";
-import groovyWalkAnimation from '../../assets/groovyWalk.json'; // Make sure path is correct
+import groovyWalkAnimation from '../../assets/groovyWalk.json'; 
 
 const HowItWorks = () => {
   return (
-    <section className="py-14 px-6 md:px-20 bg-white">
+    <section className="py-14 px-6 md:px-20 bg-white ">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-orange-500">How It Works</h2>
         <p className="text-gray-600 mt-2">Find the perfect roommate in just a few steps</p>

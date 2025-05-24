@@ -20,10 +20,10 @@ const UpdateRoommate = () => {
     availability: 'Available',
   });
 
-  const [initialData, setInitialData] = useState({}); // for comparison
+  const [initialData, setInitialData] = useState({}); 
 
   useEffect(() => {
-    fetch(`http://localhost:5000/roommate/${id}`)
+    fetch(`https://meet-my-roomie.vercel.app/roommate/${id}`)
       .then(res => res.json())
       .then(data => {
         setFormData(data);
@@ -58,7 +58,7 @@ const UpdateRoommate = () => {
       });
       return;
     }
-    const res = await fetch(`http://localhost:5000/update-roommate/${id}`, {
+    const res = await fetch(`https://meet-my-roomie.vercel.app/update-roommate/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(updatedData),

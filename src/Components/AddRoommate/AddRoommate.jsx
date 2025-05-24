@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext';
+import Loader from '../Loader/Loader';
 
 const AddRoommate = () => {
   const { user, loading } = useContext(AuthContext);
@@ -48,7 +49,7 @@ const AddRoommate = () => {
     };
 
     try {
-      const res = await fetch('http://localhost:5000/add-roommate', {
+      const res = await fetch('https://meet-my-roomie.vercel.app/add-roommate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(postData),
@@ -84,11 +85,11 @@ const AddRoommate = () => {
   };
 
   if (loading) {
-    return <div className="flex justify-center items-center h-screen text-orange-500 font-bold">Loading...</div>;
+    return <Loader></Loader>;
   }
 
   return (
-    <section className="max-w-3xl mx-auto px-6 py-12 bg-white rounded-lg shadow-lg">
+    <section className="max-w-3xl mx-auto px-6 py-12 rounded-lg shadow-lg">
       <h2 className="text-4xl font-bold mb-8 text-center text-orange-500">Add Roommate Listing</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         <input

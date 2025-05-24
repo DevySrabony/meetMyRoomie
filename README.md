@@ -1,12 +1,20 @@
-# React + Vite
+# 🏡 MeetMyRoomie
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**MeetMyRoomie** is a modern, user-friendly web application that helps users find and connect with potential roommates. Designed with React and powered by Firebase and MongoDB, it offers a seamless experience for posting, browsing, and liking roommate listings.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 **Browse Roommate Listings** — Filter and explore verified roommate posts.
+- 📝 **Post Your Own Listing** — Share details about your space and lifestyle.
+- ❤️ **Like a Roommate Profile** — Show interest and reveal contact info.
+- 🔒 **Protected Routes** — Only authenticated users can access certain pages.
+- 🌙 **Dark/Light Theme Toggle** — Enhance your browsing experience.
+- 🚀 **Responsive Design** — Optimized for desktop, tablet, and mobile.
+- 🧠 **Smart UX** — Users can’t like their own posts, and can't like the same post multiple times per session.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React, Tailwind CSS, React Router, DaisyUI, SwiperJS, Recharts
+- **Backend:** Node.js, Express.js, MongoDB (CRUD operations)
+- **Authentication:** Firebase Authentication
+- **Deployment:** Netlify (Frontend), Render/Glitch/Heroku (Backend)

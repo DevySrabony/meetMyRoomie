@@ -9,7 +9,7 @@ const MyListings = () => {
   const navigate = useNavigate();
 
   const fetchListings = async () => {
-    const res = await fetch(`http://localhost:5000/my-roommates?email=${user?.email}`);
+    const res = await fetch(`https://meet-my-roomie.vercel.app/my-roommates?email=${user?.email}`);
     const data = await res.json();
     setMyPosts(data);
   };
@@ -30,7 +30,7 @@ const MyListings = () => {
     });
 
     if (confirm.isConfirmed) {
-      const res = await fetch(`http://localhost:5000/roommate/${id}`, {
+      const res = await fetch(`https://meet-my-roomie.vercel.app/roommate/${id}`, {
         method: 'DELETE',
       });
       const data = await res.json();

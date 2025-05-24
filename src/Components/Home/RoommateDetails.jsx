@@ -12,7 +12,7 @@ const RoommateDetails = () => {
   const [hasLiked, setHasLiked] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/roommates/${id}`)
+    fetch(`https://meet-my-roomie.vercel.app/roommates/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setRoommate(data);
@@ -38,7 +38,7 @@ const RoommateDetails = () => {
     setShowContact(true);
     setHasLiked(true);
 
-    fetch(`http://localhost:5000/update-roommate/${id}`, {
+    fetch(`https://meet-my-roomie.vercel.app/update-roommate/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ likes: updatedLikes }),

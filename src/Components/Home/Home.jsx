@@ -12,7 +12,7 @@ const Home = () => {
             <div className="py-10 bg-orange-50">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-orange-500">🏡 Roommate Finder Highlights</h2>
             
-            <Marquee pauseOnHover speed={50} gradient={false} className="text-lg font-medium text-gray-700">
+            <Marquee pauseOnHover speed={50} gradient={false} className="text-lg font-medium text-gray-700 bg-gray-50 dark:bg-black dark:text-white">
                 <div className="mx-10">✨ Affordable rooms available now in Dhaka!</div>
                 <div className="mx-10">📣 Pet-friendly shared spaces in Gulshan</div>
                 <div className="mx-10">🚗 Parking included for selected listings</div>
