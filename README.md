@@ -18,3 +18,5 @@
 - **Backend:** Node.js, Express.js, MongoDB (CRUD operations)
 - **Authentication:** Firebase Authentication
 - **Deployment:** Netlify (Frontend), Render/Glitch/Heroku (Backend)
+
+used react lottie ,awesome reveal , tooltip , typewritter
