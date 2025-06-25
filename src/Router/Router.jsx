@@ -4,7 +4,7 @@ import Root from "../Root/Root";
 import Home from "../Components/Home/Home";
 import Register from "../Components/Register/Register";
 import LogIn from "../Components/LogIn/LogIn";
-import Loader from "../Components/Loader/Loader";
+// import Loader from "../Components/Loader/Loader";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import RoommateDetails from "../Components/Home/RoommateDetails";
 import AddRoommate from "../Components/AddRoommate/AddRoommate";
