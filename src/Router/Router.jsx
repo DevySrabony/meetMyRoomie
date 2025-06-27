@@ -12,6 +12,7 @@ import BrowseListing from "../Components/BrowseListing/BrowseListing";
 import MyListings from "../Components/MyListings/MyListings";
 import UpdateRoommate from "../Components/UpdateRoommate/UpdateRoommate";
 import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
+import DashboardLayout from "../Components/DashboardLayout/DashboardLayout";
 export const router = createBrowserRouter([
     {
         path:'/',
@@ -61,5 +62,11 @@ export const router = createBrowserRouter([
             }
             
         ]
+    },
+    {
+        path:'/dashboard',
+        element :<PrivateRoute>
+             <DashboardLayout></DashboardLayout>
+        </PrivateRoute>
     }
 ])

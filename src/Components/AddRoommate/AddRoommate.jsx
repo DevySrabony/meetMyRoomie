@@ -1,8 +1,9 @@
-import React, { useContext, useState, useEffect } from 'react';
+// import React, { useContext, useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router'; // Fixed incorrect import
 import { AuthContext } from '../../Context/AuthContext';
 import Loader from '../Loader/Loader';
+import { useContext, useEffect, useState } from 'react';
 
 const AddRoommate = () => {
   const { user, loading } = useContext(AuthContext);
@@ -17,6 +18,7 @@ const AddRoommate = () => {
     description: '',
     contact: '',
     availability: 'Available',
+    // image: '', // ✅ New image field added
   });
 
   useEffect(() => {
@@ -85,7 +87,7 @@ const AddRoommate = () => {
   };
 
   if (loading) {
-    return <Loader></Loader>;
+    return <Loader />;
   }
 
   return (
@@ -99,6 +101,7 @@ const AddRoommate = () => {
           placeholder="Listing Title (e.g., Looking for a roommate in NYC)"
           className="w-full border border-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
         />
+
         <input
           name="location"
           onChange={handleChange}
@@ -106,6 +109,7 @@ const AddRoommate = () => {
           placeholder="Location"
           className="w-full border border-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
         />
+
         <input
           name="rent"
           onChange={handleChange}
@@ -157,6 +161,15 @@ const AddRoommate = () => {
           className="w-full border border-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
         />
 
+        {/* ✅ New Image URL Input */}
+        {/* <input
+          name="image"
+          onChange={handleChange}
+          required
+          placeholder="Image URL (Paste link)"
+          className="w-full border border-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
+        /> */}
+
         <select
           name="availability"
           onChange={handleChange}
@@ -173,6 +186,7 @@ const AddRoommate = () => {
           placeholder="User Email"
           className="w-full bg-gray-100 border border-gray-300 p-4 rounded text-gray-500 cursor-not-allowed"
         />
+
         <input
           readOnly
           value={user?.displayName || ''}
@@ -192,6 +206,3 @@ const AddRoommate = () => {
 };
 
 export default AddRoommate;
-
-
-
